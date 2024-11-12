@@ -70,10 +70,10 @@ public class BaseTestCase {
             extentlog.log(LogStatus.PASS, "Test Case: " + result.getName() + " is passed ");
 
         } else if (result.getStatus() == ITestResult.FAILURE) {
-            ExtentReport.extentlog.log(LogStatus.FAIL, "Test case: " + result.getName() + " is failed");
-            ExtentReport.extentlog.log(LogStatus.FAIL, "Test case is failed " + result.getThrowable());
+            extentlog.log(LogStatus.FAIL, "Test case: " + result.getName() + " is failed");
+            extentlog.log(LogStatus.FAIL, "Test case is failed " + result.getThrowable());
         } else if (result.getStatus() == ITestResult.SKIP) {
-            ExtentReport.extentlog.log(LogStatus.SKIP, "Test case is Skiped ");
+            extentlog.log(LogStatus.SKIP, "Test case is Skiped ");
         }
         extentReports.endTest(ExtentReport.extentlog);
         //--------------
@@ -92,7 +92,8 @@ public class BaseTestCase {
     @AfterSuite(alwaysRun = true)
     public void endReport() {
         //ExtentReport.extentreport.flush();
-        ExtentReport.extentreport.close();
+        extentReports.endTest(extentlog);
+        extentReports.close();
         System.out.println("Close ExtentReport");
         //Email.sendEmail();
 
