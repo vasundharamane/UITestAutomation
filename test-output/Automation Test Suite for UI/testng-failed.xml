@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Automation Test Suite for UI]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Automation Test CasesChrome(failed)">
+    <classes>
+      <class name="com.task.automation.testtwo.testone">
+        <methods>
+          <include name="chrome"/>
+        </methods>
+      </class> <!-- com.task.automation.testtwo.testone -->
+    </classes>
+  </test> <!-- Automation Test CasesChrome(failed) -->
+  <test thread-count="2" parallel="tests" name="Automation Test Casesfirefox(failed)">
+    <classes>
+      <class name="com.task.automation.testtwo.testfirefox">
+        <methods>
+          <include name="firefox"/>
+        </methods>
+      </class> <!-- com.task.automation.testtwo.testfirefox -->
+    </classes>
+  </test> <!-- Automation Test Casesfirefox(failed) -->
+</suite> <!-- Failed suite [Automation Test Suite for UI] -->

@@ -1,0 +1,8 @@
+{
+	
+	"firstname":"automation",
+	"lastname":"testing",
+	"enrolldate":"03/04/2022",
+	"invalidpassword":"TestSkywalker",
+    "loginConfirmation":"https://cafetownsend-angular-rails.herokuapp.com/employees"
+}
